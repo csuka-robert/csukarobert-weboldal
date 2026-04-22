@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csuka Róbert Portfóliója</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Itt adhatsz meg stílusokat, amik csak ezen az oldalon érvényesek,
+           vagy felülírják a globális style.css-t. */
+
+        .onreflexio-szekcio {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .onreflexio-szekcio h1 {
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+
+        .technologia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .technologia-kartya {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .technologia-kartya:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .technologia-kartya img {
+            max-width: 80px;
+            height: auto;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+         .technologia-kartya i {
+             font-size: 50px;
+             color: #007bff;
+             margin-bottom: 15px;
+         }
+
+
+        .technologia-kartya h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .technologia-kartya p {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* Stílus a szöveges blokkoknak */
+        .onreflexio-szoveg {
+             max-width: 800px;
+             margin: 40px auto 0 auto;
+             text-align: left;
+             padding: 0 15px;
+        }
+
+        .onreflexio-szoveg h2 {
+             color: #333;
+             margin-bottom: 20px;
+             text-align: center;
+        }
+
+         /* Stílus a tárhely blokknak */
+         .tarhely-info {
+             max-width: 800px;
+             margin: 40px auto 0 auto;
+             text-align: left;
+             padding: 25px;
+             background-color: #eef;
+             border-left: 5px solid #007bff;
+             border-radius: 5px;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+         }
+
+         .tarhely-info h2 {
+             color: #007bff;
+             margin-top: 0;
+             margin-bottom: 15px;
+              text-align: center;
+         }
+
+         .tarhely-info p {
+             color: #444;
+             line-height: 1.6;
+         }
+
+         /* Stílus a biztonsági megjegyzésnek */
+         .security-note {
+             font-size: 0.9em; /* Kicsit kisebb betűméret */
+             color: #d9534f; /* Pirosas szín a figyelmeztetéshez */
+             margin-top: 15px;
+             padding-top: 15px;
+             border-top: 1px dashed #ccc; /* Szakaszoló vonal */
+         }
+
+
+        /* Reszponzív stílusok */
+        @media(max-width: 768px) {
+             .onreflexio-szekcio {
+                 padding: 40px 0;
+             }
+             .onreflexio-szekcio h1 {
+                 margin-bottom: 30px;
+             }
+             .technologia-grid {
+                 gap: 20px;
+             }
+             .technologia-kartya {
+                 padding: 15px;
+             }
+             .technologia-kartya img {
+                 max-width: 60px;
+             }
+              .technologia-kartya i {
+                  font-size: 40px;
+              }
+              .onreflexio-szoveg, .tarhely-info {
+                  margin-top: 30px;
+                  padding: 0 15px;
+              }
+               .tarhely-info {
+                   padding: 20px 15px;
+               }
+               .onreflexio-szoveg h2, .tarhely-info h2 {
+                   margin-bottom: 15px;
+               }
+               .security-note {
+                   margin-top: 10px;
+                   padding-top: 10px;
+               }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
+            <nav class="navbar">
+                <a href="index.html" class="logo">Csuka Róbert</a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Bemutatkozás</a></li>
+                    <li><a href="projektek.html">Projektek</a></li>
+                    <li><a href="onreflexio.htm">Önreflexió</a></li>
+
+                </ul>
+            </nav>
+        </div> <!-- CONTAINER BEZÁRVA -->
+    </header>
+
+    <main>
+        <section class="onreflexio-szekcio">
+            <div class="container">
+                <h1>Alkalmazott Technológiák és Önálló Tanulás</h1>
+
+                <div class="technologia-grid">
+                    <!-- Technológia kártyák (mint korábban) -->
+                    <div class="technologia-kartya" data-aos="slide-left">
+                         <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                        <p>
+                            A weboldal struktúrájának kialakításához és a tartalom elrendezéséhez használtam. Megtanultam a szemantikus elemek (header, main, section, footer, article) használatát.
+                        </p>
+                    </div>
+
+                    <div class="technologia-kartya" data-aos="slide-left">
+                         <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                        <p>
+                            A weboldal kinézetéért és stílusáért felelős. Különös figyelmet fordítottam a reszponzív designra (Flexbox, Grid, Media Queries), hogy az oldal jól jelenjen meg különböző eszközökön.
+                        </p>
+                    </div>
+
+                    <div class="technologia-kartya" data-aos="slide-left">
+                         <i class="fab fa-js-square"></i>
+                        <h3>JavaScript</h3>
+                        <p>
+                            A weboldal interaktivitásáért és dinamikus elemeiért felel. Különösen a hamburger menü működését valósítottam meg JavaScripttel.
+                        </p>
+                    </div>
+
+                    <div class="technologia-kartya" data-aos="slide-left">
+                         <img src="images/plcikon.png" alt="PLC ikon">
+                        <h3>PLC Programozás</h3>
+                        <p>
+                            Megismerkedtem a Programozható Logikai Vezérlők (PLC) működésével és programozási alapjaival (pl. létra diagram). Ezt a tudást a futófény projektben alkalmaztam.
+                        </p>
+                    </div>
+
+                     <div class="technologia-kartya" data-aos="slide-left">
+                          <img src="images/electricity-icon-vector.jpg" alt="Elektronika ikon">
+                         <h3>Elektronika Alapok</h3>
+                         <p>
+                             Áramkörök tervezése és építése. Ohm törvénye, feszültségosztó, komponensek (ellenállás, LED, tápegység) működése és használata.
+                         </p>
+                     </div>
+
+                     <div class="technologia-kartya" data-aos="slide-left">
+                          <i class="fab fa-github"></i>
+                         <h3>Verziókövetés (Git/GitHub)</h3>
+                         <p>
+                             Megtanultam a Git használatát a kód változásainak követésére és a GitHub-ot a projektek tárolására, megosztására és a munkafolyamat kezelésére.
+                         </p>
+                     </div>
+
+                    <!-- További technológia kártyák ide -->
+
+                </div> <!-- End of .technologia-grid -->
+
+                <!-- Önálló tanulási folyamat szöveg -->
+                <div class="onreflexio-szoveg" data-aos="fade-up">
+                    <h2>Önálló Tanulási Folyamat</h2>
+                    <p>
+                        Ez a portfólió weboldal és a rajta bemutatott projektek nagyrészt önálló tanulási folyamat eredményei. Számos online forrást (dokumentációk, tutorialok, online kurzusok), videót és fórumot használtam a szükséges ismeretek megszerzéséhez.
+                        <br><br>
+                        A webfejlesztés terén a  HTML, CSS és JavaScript  alapjait sajátítottam el, különös hangsúlyt fektetve a reszponzív designra, hogy az oldal minden eszközön jól használható legyen.
+                        <br><br>
+                        Az  ipari automatizálás és elektronika  területén a  PLC programozás  és az alapvető  elektronikai áramkörök  működését és tervezését tanulmányoztam. A projektek gyakorlati tapasztalatot nyújtottak a tanult elvek alkalmazásában.
+                        <br><br>
+                        A  Git és GitHub  használata elengedhetetlen volt a projektek verziókövetéséhez és a fejlődés dokumentálásához. Ez a módszer segített a munka szervezésében és a későbbi visszatekintésben.
+                        <br><br>
+                        Hiszem, hogy az önálló tanulás és a folyamatos fejlődés kulcsfontosságú a mai gyorsan változó technológiai környezetben. Nyitott vagyok új technológiák és módszerek megismerésére.
+                    </p>
+                </div>
+
+                <!-- Új blokk a tárhely és domain információval -->
+                <div class="tarhely-info" data-aos="fade-up">
+                    <h2>A Weboldal Elhelyezése (Tárhely és Domain)</h2>
+                    <p>
+                        Ezt a portfólió weboldalt a  Nethely.hu  szolgáltatójánál helyeztem el. Egy  1 GB tárhelyes csomagot  választottam, ami a jelenlegi tartalomhoz bőven elegendő, és a vásárlás során  kedvező áron  sikerült hozzájutnom. A tárhely kiválasztása és beállítása is része volt a weboldal elkészítésének, ami újabb gyakorlati tapasztalatot jelentett a weboldal publikálásával kapcsolatban.
+                    </p>
+                    <p class="security-note">
+                        Jelenleg a weboldal egy ingyenes aldomain néven érhető el a Nethely.hu jóvoltából. Ennek a megoldásnak a hátránya, hogy a weboldal  HTTP protokollon  keresztül működik, nem pedig a biztonságosabb  HTTPS-en . Ez azt jelenti, hogy az adatok átvitele nem titkosított. Tisztában vagyok ezzel a korláttal, és a jövőben fontolóra veszem egy saját domain név regisztrálását és egy SSL tanúsítvány beszerzését a HTTPS kapcsolat biztosítása érdekében.
+                    </p>
+                </div>
+
+
+            </div> <!-- End of .container -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
+            <p>© 2025 Csuka Róbert</p>
+        </div> <!-- CONTAINER BEZÁRVA -->
+    </footer>
+
+    <!-- Hamburger menü JavaScript -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        hamburger.classList.remove('active');
+                    }
+                });
+            });
+        }
+    </script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

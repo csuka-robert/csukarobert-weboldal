@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csuka Róbert Portfóliója</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Opcionális: Font Awesome ikonokhoz, ha használod az elérhetőségek ikonjainál -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Opcionális: Google Fonts, ha használsz egyéni betűtípusokat -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Fejléc (A főoldal stílusára épül) -->
+    <header>
+        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
+            <nav class="navbar">
+                <a href="index.html" class="logo">Csuka Róbert</a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Bemutatkozás</a></li>
+                    <li><a href="projektek.html">Projektek</a></li>
+                    <li><a href="onreflexio.htm">Önreflexió</a></li>
+
+                </ul>
+            </nav>
+        </div> <!-- CONTAINER BEZÁRVA -->
+    </header>
+
+    <!-- Fő tartalom -->
+    <main>
+        <!-- Projektek Szekció -->
+        <section id="projektek">
+            <div class="container">
+                <h2>Projektek</h2>
+
+                <div class="projekt-lista-grid">
+                    <!-- 1. Projekt Kártya -->
+                    <div class="projekt-kartya">
+                        <img src="images/ni-multisim-png (2).PNG" alt="Projekt 1 előnézeti kép" class="projekt-kartya-kep">
+                        <div class="projekt-kartya-tartalom">
+                            <h3>Ellenállás Mérés Feszültség Összehasonlítással</h3>
+                            <p>Feszültségosztóval mérhető az ismeretlen ellenállás értéke multiméter nélkül.</p>
+                            <div class="projekt-gombok">
+                                <!-- LINK A DEDIKÁLT PROJEKT OLDALRA -->
+                                <a href="projekt/ellenallas_meres.html" class="btn btn-primary">Megtekintés</a>
+                                <!-- Link a GitHub repóhoz (ha van) -->
+                                <a href="https://github.com/csuka-robert/Resistance-Measurement-Voltage-Comparison.git" class="btn btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Projekt Kártya -->
+                    <div class="projekt-kartya">
+                         <img src="images/projekt_2.png" alt="Projekt 2 előnézeti kép" class="projekt-kartya-kep">
+                        <div class="projekt-kartya-tartalom">
+                            <h3>PLC-vezérelt Futófény Projekt</h3>
+                            <p>Ez a projekt egy LED futófény rendszer, amely PLC segítségével vezérli a digitális kimeneteket, bemutatva az automatizálás alapjait és a digitális I/O kezelését ipari környezetben.</p>
+                            <div class="projekt-gombok">
+                                <!-- LINK A DEDIKÁLT PROJEKT OLDALRA -->
+                                <a href="projekt/futofeny.html" class="btn btn-primary">Megtekintés</a>
+                                <a href="https://github.com/csuka-robert/PLC-controlled-Running-Light-Project" class="btn btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Projekt Kártya -->
+                    <div class="projekt-kartya">
+                        <video autoplay muted loop poster="projekt3-preview-poster.jpg" class="projekt-kartya-video">
+                            <source src="video/projekt_3.MP4" type="video/mp4">
+                            <source src="video/projekt_3.MP4"type="video/webm">
+                            <p>A böngésződ nem támogatja a videó lejátszását. <a href="images/projekt_3.MP4">Töltsd le a videót itt</a>.</p>
+                          </video>
+                       <div class="projekt-kartya-tartalom">
+                           <h3>Jelzőlámpa rendszer</h3>
+                           <p>Ez a projekt egy ipari automatizálási rendszer, amely az OpenPLC és az ESP32 segítségével távoli irányítást és monitorozást tesz lehetővé webes felületen keresztül.</p>
+                            <div class="projekt-gombok">
+                                <!-- LINK A DEDIKÁLT PROJEKT OLDALRA -->
+                                <a href="projekt/jelzorendszer.html" class="btn btn-primary">Megtekintés</a>
+                               <a href="https://github.com/csuka-robert/Signal-light-system" class="btn btn-secondary" target="_blank">GitHub</a>
+                           </div>
+                       </div>
+                   </div>
+
+                    <!-- Ide jöhetnek további projekt kártyák -->
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lábléc (A főoldal stílusára épül) -->
+    <footer>
+        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
+            <p>© 2025 Csuka Róbert</p>
+        </div> <!-- CONTAINER BEZÁRVA -->
+    </footer>
+
+    <!-- JavaScript a hamburger menühöz (a modális ablakokhoz szükséges JS-t eltávolítottuk) -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

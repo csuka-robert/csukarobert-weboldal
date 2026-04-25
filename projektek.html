@@ -3,113 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Csuka Róbert Portfóliója</title>
+    <title>Projektek - Csuka Róbert</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Opcionális: Font Awesome ikonokhoz, ha használod az elérhetőségek ikonjainál -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Opcionális: Google Fonts, ha használsz egyéni betűtípusokat -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Fejléc (A főoldal stílusára épül) -->
-    <header>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <nav class="navbar">
-                <a href="index.html" class="logo">Csuka Róbert</a>
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Bemutatkozás</a></li>
-                    <li><a href="projektek.html">Projektek</a></li>
+    <!-- ===== VÉKONYABB FEJLÉC - CSAK MENÜ KÖZÉPEN ===== -->
+    <header class="projects-header">
+        <div class="container">
+            <nav class="nav-centered">
+                <ul class="nav-menu-centered">
+                    <li><a href="index.html">Kezdőlap</a></li>
+                    <li><a href="projektek.html" class="active">Projektek</a></li>
                     <li><a href="onreflexio.htm">Önreflexió</a></li>
-
                 </ul>
             </nav>
-        </div> <!-- CONTAINER BEZÁRVA -->
+        </div>
     </header>
 
-    <!-- Fő tartalom -->
+    <!-- ===== FŐ TARTALOM ===== -->
     <main>
-        <!-- Projektek Szekció -->
-        <section id="projektek">
+        <!-- Oldal címsor - FÉLKÖR ALAKZATTAL A HÁTTÉRBEN -->
+        <section class="page-header-enhanced">
             <div class="container">
-                <h2>Projektek</h2>
-
-                <div class="projekt-lista-grid">
-                    <!-- 1. Projekt Kártya -->
-                    <div class="projekt-kartya">
-                        <img src="images/ni-multisim-png (2).PNG" alt="Projekt 1 előnézeti kép" class="projekt-kartya-kep">
-                        <div class="projekt-kartya-tartalom">
-                            <h3>Ellenállás Mérés Feszültség Összehasonlítással</h3>
-                            <p>Feszültségosztóval mérhető az ismeretlen ellenállás értéke multiméter nélkül.</p>
-                            <div class="projekt-gombok">
-                                <!-- LINK A DEDIKÁLT PROJEKT OLDALRA -->
-                                <a href="projekt/ellenallas_meres.html" class="btn btn-primary">Megtekintés</a>
-                                <!-- Link a GitHub repóhoz (ha van) -->
-                                <a href="https://github.com/csuka-robert/Resistance-Measurement-Voltage-Comparison.git" class="btn btn-secondary" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. Projekt Kártya -->
-                    <div class="projekt-kartya">
-                         <img src="images/projekt_2.png" alt="Projekt 2 előnézeti kép" class="projekt-kartya-kep">
-                        <div class="projekt-kartya-tartalom">
-                            <h3>PLC-vezérelt Futófény Projekt</h3>
-                            <p>Ez a projekt egy LED futófény rendszer, amely PLC segítségével vezérli a digitális kimeneteket, bemutatva az automatizálás alapjait és a digitális I/O kezelését ipari környezetben.</p>
-                            <div class="projekt-gombok">
-                                <!-- LINK A DEDIKÁLT PROJEKT OLDALRA -->
-                                <a href="projekt/futofeny.html" class="btn btn-primary">Megtekintés</a>
-                                <a href="https://github.com/csuka-robert/PLC-controlled-Running-Light-Project" class="btn btn-secondary" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3. Projekt Kártya -->
-                    <div class="projekt-kartya">
-                        <video autoplay muted loop poster="projekt3-preview-poster.jpg" class="projekt-kartya-video">
-                            <source src="video/projekt_3.MP4" type="video/mp4">
-                            <source src="video/projekt_3.MP4"type="video/webm">
-                            <p>A böngésződ nem támogatja a videó lejátszását. <a href="images/projekt_3.MP4">Töltsd le a videót itt</a>.</p>
-                          </video>
-                       <div class="projekt-kartya-tartalom">
-                           <h3>Jelzőlámpa rendszer</h3>
-                           <p>Ez a projekt egy ipari automatizálási rendszer, amely az OpenPLC és az ESP32 segítségével távoli irányítást és monitorozást tesz lehetővé webes felületen keresztül.</p>
-                            <div class="projekt-gombok">
-                                <!-- LINK A DEDIKÁLT PROJEKT OLDALRA -->
-                                <a href="projekt/jelzorendszer.html" class="btn btn-primary">Megtekintés</a>
-                               <a href="https://github.com/csuka-robert/Signal-light-system" class="btn btn-secondary" target="_blank">GitHub</a>
-                           </div>
-                       </div>
-                   </div>
-
-                    <!-- Ide jöhetnek további projekt kártyák -->
-
+                <div class="title-wrapper">
+                    <div class="title-backdrop"></div>
+                    <h1 class="page-title-enhanced">
+                        <span class="rocket-emoji">🚀</span> 
+                        <span class="title-text">Projektek</span>
+                    </h1>
+                    <p class="page-subtitle-enhanced">Elektronikai munkáim gyűjteménye</p>
                 </div>
             </div>
         </section>
+
+        <!-- Projektek Grid -->
+        <section class="projects-section">
+            <div class="container">
+                
+                <!-- Szűrő gombok -->
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Összes</button>
+                    <button class="filter-btn" data-filter="elektro">Elektronika</button>
+                </div>
+
+                <!-- PROJEKT KÁRTYÁK -->
+                <div class="projects-grid">
+                    
+                    <!-- 1. Ellenállás Mérés -->
+                    <div class="project-card" data-category="elektro">
+                        <div class="card-image">
+                            <img src="images/ellenallas-meres.jpg" alt="Ellenállás mérés" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="card-placeholder" style="display: none;">🔬</div>
+                            <div class="card-overlay">
+                                <a href="projekt/ellenallas_meres.html" class="overlay-link">Részletek →</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Ellenállás Mérés</h3>
+                            <p class="card-description">
+                                Precíziós ellenállásmérő műszer Arduino alapokon. Feszültségosztó elvén működő, 
+                                széles mérési tartományú eszköz LCD kijelzővel.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tech-badge">Arduino</span>
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">Elektronika</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Futófény -->
+                    <div class="project-card" data-category="elektro">
+                        <div class="card-image">
+                            <img src="images/futofeny.jpg" alt="Futófény" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="card-placeholder" style="display: none;">💡</div>
+                            <div class="card-overlay">
+                                <a href="projekt/futofeny.html" class="overlay-link">Részletek →</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Futófény Áramkör</h3>
+                            <p class="card-description">
+                                Klasszikus futófény 555-ös timer IC és 4017-es dekád számláló 
+                                felhasználásával. Állítható sebességű LED sor.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tech-badge">555 Timer</span>
+                                <span class="tech-badge">4017 IC</span>
+                                <span class="tech-badge">Analóg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Jelzőrendszer -->
+                    <div class="project-card" data-category="elektro">
+                        <div class="card-image">
+                            <img src="images/jelzorendszer.jpg" alt="Jelzőrendszer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="card-placeholder" style="display: none;">🚨</div>
+                            <div class="card-overlay">
+                                <a href="projekt/jelzorendszer.html" class="overlay-link">Részletek →</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Jelzőrendszer</h3>
+                            <p class="card-description">
+                                Nyomógombbal vezérelhető optikai és akusztikus jelzőrendszer. 
+                                Tranzisztoros kapcsolás, relé kimenet, nyugtázás funkcióval.
+                            </p>
+                            <div class="card-tech">
+                                <span class="tech-badge">Tranzisztor</span>
+                                <span class="tech-badge">Relé</span>
+                                <span class="tech-badge">Analóg</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="no-results" style="display: none;">
+                    <p>🔍 Nincs megjeleníthető projekt ebben a kategóriában.</p>
+                </div>
+
+            </div>
+        </section>
+
+<!-- Érdeklődés szekció -->
+<section class="contact-prompt">
+    <div class="container">
+        <div class="prompt-box">
+            <h2>💬 Érdekel valamelyik projekt?</h2>
+            <p>Ha részletesebb információra van szükséged, keress nyugodtan!</p>
+            <div class="prompt-buttons">
+                <a href="index.html#elerhetosegek" class="btn btn-outline">Kapcsolat</a>
+                <a href="https://github.com/csuka-robert" class="btn btn-outline" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
 
-    <!-- Lábléc (A főoldal stílusára épül) -->
-    <footer>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <p>© 2025 Csuka Róbert</p>
-        </div> <!-- CONTAINER BEZÁRVA -->
+    <!-- ===== LÁBLÉC - CSAK COPYRIGHT ===== -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <p class="footer-text-centered">© 2026 Csuka Róbert</p>
+        </div>
     </footer>
 
-    <!-- JavaScript a hamburger menühöz (a modális ablakokhoz szükséges JS-t eltávolítottuk) -->
     <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+        // Szűrő funkció
+        (function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.project-card');
+            const noResults = document.querySelector('.no-results');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    let visible = 0;
+                    
+                    cards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                            visible++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    if (noResults) {
+                        noResults.style.display = visible ? 'none' : 'block';
+                    }
+                });
+            });
+        })();
     </script>
 </body>
 </html>

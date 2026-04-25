@@ -1,89 +1,227 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Csuka Róbert Portfóliója</title>
-        <link rel="stylesheet" href="style.css">
-        <!-- Google Fonts link -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csuka Róbert - Bemutatkozás</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-
-    <header>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <nav class="navbar">
-                <a href="index.html" class="logo">Csuka Róbert</a>
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Bemutatkozás</a></li>
+    <!-- ===== FEJLÉC ===== -->
+    <header class="projects-header">
+        <div class="container">
+            <nav class="nav-centered">
+                <ul class="nav-menu-centered">
+                    <li><a href="index.html" class="active">Kezdőlap</a></li>
                     <li><a href="projektek.html">Projektek</a></li>
                     <li><a href="onreflexio.htm">Önreflexió</a></li>
-
                 </ul>
             </nav>
-        </div> <!-- CONTAINER BEZÁRVA -->
+        </div>
     </header>
 
+    <!-- ===== FŐ TARTALOM ===== -->
     <main>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-
-             <section id="bemutatkozas">
-                 <div class="bemutatkozas-tartalom">
-                     <img src="images/profil_kep.jpeg" alt="Csuka Róbert profilképe helyőrző" class="profil-kep animate-on-scroll fade-in">
-
-                     <div class="bemutatkozas-szoveg">
-                         <h2 class="animate-on-scroll fade-in">Csuka Róbert</h2>
-                         <p class="animate-on-scroll fade-in">
-                            Üdvözöllek a portfólió oldalamon! Csuka Róbert vagyok, a Debreceni SZC Brassai Sámuel Szakgimnázium tanulója. Jelenleg informatikai ismereteimet bővítem, kiemelt figyelmet fordítva a webfejlesztésre és a programozásra.
-                         </p>
-                         <p class="animate-on-scroll fade-in">
-                             Ez a weboldal a digitális névjegyemként és a készségeimet bemutató gyűjteményként szolgál. Itt megtalálhatod a projektjeimet, amiken dolgoztam, és betekintést nyerhetsz abba, hogyan alkalmazom a tanultakat a gyakorlatban.
-                         </p>
-                         <p class="animate-on-scroll fade-in">
-                             Célom, hogy folyamatosan fejlődjek és új technológiákat sajátítsak el. Nyitott vagyok az új kihívásokra és szívesen veszek részt izgalmas projektekben. Remélem, élvezni fogod a portfólióm böngészését!
-                         </p>
-                     </div>
-                 </div>
-             </section>
-             <section id="elerhetosegek" class="animate-on-scroll fade-in">
-                <h2>Elérhetőségek</h2>
-                <div class="elerhetoseg-lista">
-                    <div class="elerhetoseg-elem">
-                        <i class="fas fa-envelope icon"></i> <!-- E-mail ikon -->
-                        <span>E-mail:</span> <a href="mailto:csukaa0@gmail.com">csukaa0@gmail.com</a>
+        <!-- Hero Szekció -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="hero-greeting">Üdvözöllek!</span>
+                        <h1 class="hero-title">Csuka Róbert Krisztian vagyok</h1>
+                        <p class="hero-subtitle">
+ <p class="hero-subtitle">
+    Elsőéves villamosmérnök hallgató vagyok. Szenvedélyem az elektronika és a programozás ötvözése.
+</p>
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="projektek.html" class="btn btn-primary">Projektek megtekintése</a>
+                            <a href="#elerhetosegek" class="btn btn-outline">Kapcsolat</a>
+                        </div>
                     </div>
-                    <div class="elerhetoseg-elem">
-                        <i class="fas fa-phone icon"></i> <!-- Telefon ikon -->
-                        <span>Telefon:</span> <a href="tel:+36 30 351 54 39">+36 30 351 54 39</a>
+                    <div class="hero-image">
+                        <div class="profile-image-wrapper">
+                            <img src="images/profil-kep2.png" alt="Csuka Róbert" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="profile-placeholder" style="display: none;">👨‍💻</div>
+                        </div>
                     </div>
-                    <div class="elerhetoseg-elem">
-                        <i class="fab fa-github icon"></i> <!-- GitHub ikon -->
-                        <span>GitHub:</span> <a href="https://github.com/csuka-robert" target="_blank">github.com/csuka-robert</a>
-                    </div>
-                    <!-- Ide jöhetnek további elérhetőségek, pl. weboldal, Twitter, stb. -->
                 </div>
-            </section>
-            <!-- ELÉRHETŐSÉGEK SZEKCIÓ VÉGE -->
+            </div>
+        </section>
 
-             <!-- További bemutatkozó tartalom -->
-             <!-- Esetleg további szekciók ide -->
+        <!-- Bemutatkozás Szekció -->
+        <section id="bemutatkozas" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Rólam</h2>
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="about-icon">📋</div>
+                        <h3>Bemutatkozás</h3>
+                        <p>
+                            Csuka Róbert vagyok, elektronikai műszerész és webfejlesztő tanuló. 
+                            Az elektronika világában otthonosan mozgok, és folyamatosan bővítem 
+                            ismereteimet a webfejlesztés területén is.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">🎓</div>
+                        <h3>Tanulmányaim</h3>
+                        <p>
+                            Jelenleg elektronikai műszerész képzésen veszek részt, emellett 
+                            autodidakta módon tanulom a webfejlesztést. Célom, hogy a két 
+                            területet ötvözve innovatív megoldásokat hozzak létre.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">🎯</div>
+                        <h3>Céljaim</h3>
+                        <p>
+                            Szeretnék olyan projekteket létrehozni, amelyek az elektronika 
+                            és a webes technológiák határterületén mozognak. IoT eszközök, 
+                            okos otthon megoldások és interaktív webes felületek fejlesztése.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </div> <!-- CONTAINER BEZÁRVA -->
+        <!-- Kiemelt Projektek Szekció -->
+        <section class="featured-projects">
+            <div class="container">
+                <h2 class="section-title">Kiemelt Projektek</h2>
+                <div class="featured-grid">
+                    <!-- 1. Kiemelt projekt -->
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <span class="featured-emoji">🔬</span>
+                        </div>
+                        <div class="featured-content">
+                            <h3>Ellenállás Mérés</h3>
+                            <p>Precíziós ellenállásmérő műszer Arduino alapokon, feszültségosztó elvén.</p>
+                            <a href="projekt/ellenallas_meres.html" class="featured-link">
+                                Részletek <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 2. Kiemelt projekt -->
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <span class="featured-emoji">💡</span>
+                        </div>
+                        <div class="featured-content">
+                            <h3>Futófény Áramkör</h3>
+                            <p>Klasszikus futófény 555-ös timer IC és 4017-es dekád számláló felhasználásával.</p>
+                            <a href="projekt/futofeny.html" class="featured-link">
+                                Részletek <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 3. Kiemelt projekt -->
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <span class="featured-emoji">🚨</span>
+                        </div>
+                        <div class="featured-content">
+                            <h3>Jelzőrendszer</h3>
+                            <p>Nyomógombbal vezérelhető optikai és akusztikus jelzőrendszer relé kimenettel.</p>
+                            <a href="projekt/jelzorendszer.html" class="featured-link">
+                                Részletek <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-footer">
+                    <a href="projektek.html" class="btn btn-primary">Összes projekt megtekintése</a>
+                </div>
+            </div>
+        </section>
+<!-- CV Szekció -->
+<section class="cv-section">
+    <div class="container">
+        <div class="cv-card">
+            <div class="cv-content">
+                <span class="cv-icon">📋</span>
+                <h3>Részletes önéletrajzom</h3>
+                <p>Töltsd le a teljes CV-met PDF formátumban, amely tartalmazza a tanulmányaimat, tapasztalataimat és készségeimet.</p>
+            </div>
+            <a href="files/cv_csuka_robert.pdf" target="_blank" class="btn btn-primary">📄 CV Letöltése</a>
+        </div>
+    </div>
+</section>
+        <!-- Elérhetőségek Szekció -->
+        <section id="elerhetosegek" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Elérhetőségek</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:csukarobert@mailbox.unideb.hu" class="contact-value">csukarobert@mailbox.unideb.hu</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🐙</div>
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/csuka-robert" target="_blank" class="contact-value">github.com/csuka-robert</a>
+                    </div>
+<div class="contact-card">
+    <div class="contact-icon">💼</div>
+    <span class="contact-label">LinkedIn</span>
+    <a href="https://www.linkedin.com/in/r%C3%B3bert-kriszti%C3%A1n-csuka-1b8528231/" target="_blank" class="contact-value">linkedin.com/in/csuka-robert</a>
+</div>
+                </div>
+            </div>
+        </section>
     </main>
-    
-    <footer>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <p>© 2025 Csuka Róbert</p>
-        </div> <!-- CONTAINER BEZÁRVA -->
+
+    <!-- ===== LÁBLÉC - CSAK COPYRIGHT ===== -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <p class="footer-text-centered">© 2026 Csuka Róbert</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Mobil menü kezelése
+        (function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                
+                // Menüpontra kattintva bezárás
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Smooth scroll a belső linkekhez
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>

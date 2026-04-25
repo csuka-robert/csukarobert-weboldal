@@ -3,309 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Csuka Róbert Portfóliója</title>
+    <title>Önreflexió - Csuka Róbert</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-    <style>
-        /* Itt adhatsz meg stílusokat, amik csak ezen az oldalon érvényesek,
-           vagy felülírják a globális style.css-t. */
-
-        .onreflexio-szekcio {
-            padding: 80px 0;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        .onreflexio-szekcio h1 {
-            color: #1a1a1a;
-            margin-bottom: 40px;
-        }
-
-        .technologia-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .technologia-kartya {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .technologia-kartya:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .technologia-kartya img {
-            max-width: 80px;
-            height: auto;
-            margin-bottom: 15px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-         .technologia-kartya i {
-             font-size: 50px;
-             color: #007bff;
-             margin-bottom: 15px;
-         }
-
-
-        .technologia-kartya h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .technologia-kartya p {
-            color: #555;
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
-
-        /* Stílus a szöveges blokkoknak */
-        .onreflexio-szoveg {
-             max-width: 800px;
-             margin: 40px auto 0 auto;
-             text-align: left;
-             padding: 0 15px;
-        }
-
-        .onreflexio-szoveg h2 {
-             color: #333;
-             margin-bottom: 20px;
-             text-align: center;
-        }
-
-         /* Stílus a tárhely blokknak */
-         .tarhely-info {
-             max-width: 800px;
-             margin: 40px auto 0 auto;
-             text-align: left;
-             padding: 25px;
-             background-color: #eef;
-             border-left: 5px solid #007bff;
-             border-radius: 5px;
-             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-         }
-
-         .tarhely-info h2 {
-             color: #007bff;
-             margin-top: 0;
-             margin-bottom: 15px;
-              text-align: center;
-         }
-
-         .tarhely-info p {
-             color: #444;
-             line-height: 1.6;
-         }
-
-         /* Stílus a biztonsági megjegyzésnek */
-         .security-note {
-             font-size: 0.9em; /* Kicsit kisebb betűméret */
-             color: #d9534f; /* Pirosas szín a figyelmeztetéshez */
-             margin-top: 15px;
-             padding-top: 15px;
-             border-top: 1px dashed #ccc; /* Szakaszoló vonal */
-         }
-
-
-        /* Reszponzív stílusok */
-        @media(max-width: 768px) {
-             .onreflexio-szekcio {
-                 padding: 40px 0;
-             }
-             .onreflexio-szekcio h1 {
-                 margin-bottom: 30px;
-             }
-             .technologia-grid {
-                 gap: 20px;
-             }
-             .technologia-kartya {
-                 padding: 15px;
-             }
-             .technologia-kartya img {
-                 max-width: 60px;
-             }
-              .technologia-kartya i {
-                  font-size: 40px;
-              }
-              .onreflexio-szoveg, .tarhely-info {
-                  margin-top: 30px;
-                  padding: 0 15px;
-              }
-               .tarhely-info {
-                   padding: 20px 15px;
-               }
-               .onreflexio-szoveg h2, .tarhely-info h2 {
-                   margin-bottom: 15px;
-               }
-               .security-note {
-                   margin-top: 10px;
-                   padding-top: 10px;
-               }
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <nav class="navbar">
-                <a href="index.html" class="logo">Csuka Róbert</a>
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Bemutatkozás</a></li>
+    <!-- ===== VÉKONYABB FEJLÉC - CSAK MENÜ KÖZÉPEN ===== -->
+    <header class="projects-header">
+        <div class="container">
+            <nav class="nav-centered">
+                <ul class="nav-menu-centered">
+                    <li><a href="index.html">Kezdőlap</a></li>
                     <li><a href="projektek.html">Projektek</a></li>
-                    <li><a href="onreflexio.htm">Önreflexió</a></li>
-
+                    <li><a href="onreflexio.htm" class="active">Önreflexió</a></li>
                 </ul>
             </nav>
-        </div> <!-- CONTAINER BEZÁRVA -->
+        </div>
     </header>
 
+    <!-- ===== FŐ TARTALOM ===== -->
     <main>
-        <section class="onreflexio-szekcio">
+        <!-- Oldal címsor -->
+        <section class="page-header-enhanced">
             <div class="container">
-                <h1>Alkalmazott Technológiák és Önálló Tanulás</h1>
+                <div class="title-wrapper">
+                    <div class="title-backdrop"></div>
+                    <h1 class="page-title-enhanced">
+                        <span class="rocket-emoji">🤖</span> 
+                        <span class="title-text">Önreflexió</span>
+                    </h1>
+                    <p class="page-subtitle-enhanced">Őszinte vallomás az AI használatról</p>
+                </div>
+            </div>
+        </section>
 
-                <div class="technologia-grid">
-                    <!-- Technológia kártyák (mint korábban) -->
-                    <div class="technologia-kartya" data-aos="slide-left">
-                         <i class="fab fa-html5"></i>
-                        <h3>HTML5</h3>
-                        <p>
-                            A weboldal struktúrájának kialakításához és a tartalom elrendezéséhez használtam. Megtanultam a szemantikus elemek (header, main, section, footer, article) használatát.
-                        </p>
+        <!-- Önreflexió Tartalom -->
+        <section class="reflection-section">
+            <div class="container">
+                
+                <!-- AI Vallomás Kártya -->
+                <div class="reflection-card ai-confession">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">🤖</span>
+                        <h2>Az AI bevallja...</h2>
                     </div>
-
-                    <div class="technologia-kartya" data-aos="slide-left">
-                         <i class="fab fa-css3-alt"></i>
-                        <h3>CSS3</h3>
-                        <p>
-                            A weboldal kinézetéért és stílusáért felelős. Különös figyelmet fordítottam a reszponzív designra (Flexbox, Grid, Media Queries), hogy az oldal jól jelenjen meg különböző eszközökön.
-                        </p>
+                    <div class="reflection-content">
+                        <div class="ai-warning">
+                            <span class="warning-icon">⚠️</span>
+                            <div class="warning-text">
+                                <p><strong>Figyelem!</strong> Ezt a weboldalt nagyrészt AI (Claude) segítségével készítettem.</p>
+                                <p>De mielőtt elítélnél, olvasd el az alábbi vallomásomat!</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="technologia-kartya" data-aos="slide-left">
-                         <i class="fab fa-js-square"></i>
-                        <h3>JavaScript</h3>
-                        <p>
-                            A weboldal interaktivitásáért és dinamikus elemeiért felel. Különösen a hamburger menü működését valósítottam meg JavaScripttel.
-                        </p>
-                    </div>
-
-                    <div class="technologia-kartya" data-aos="slide-left">
-                         <img src="images/plcikon.png" alt="PLC ikon">
-                        <h3>PLC Programozás</h3>
-                        <p>
-                            Megismerkedtem a Programozható Logikai Vezérlők (PLC) működésével és programozási alapjaival (pl. létra diagram). Ezt a tudást a futófény projektben alkalmaztam.
-                        </p>
-                    </div>
-
-                     <div class="technologia-kartya" data-aos="slide-left">
-                          <img src="images/electricity-icon-vector.jpg" alt="Elektronika ikon">
-                         <h3>Elektronika Alapok</h3>
-                         <p>
-                             Áramkörök tervezése és építése. Ohm törvénye, feszültségosztó, komponensek (ellenállás, LED, tápegység) működése és használata.
-                         </p>
-                     </div>
-
-                     <div class="technologia-kartya" data-aos="slide-left">
-                          <i class="fab fa-github"></i>
-                         <h3>Verziókövetés (Git/GitHub)</h3>
-                         <p>
-                             Megtanultam a Git használatát a kód változásainak követésére és a GitHub-ot a projektek tárolására, megosztására és a munkafolyamat kezelésére.
-                         </p>
-                     </div>
-
-                    <!-- További technológia kártyák ide -->
-
-                </div> <!-- End of .technologia-grid -->
-
-                <!-- Önálló tanulási folyamat szöveg -->
-                <div class="onreflexio-szoveg" data-aos="fade-up">
-                    <h2>Önálló Tanulási Folyamat</h2>
-                    <p>
-                        Ez a portfólió weboldal és a rajta bemutatott projektek nagyrészt önálló tanulási folyamat eredményei. Számos online forrást (dokumentációk, tutorialok, online kurzusok), videót és fórumot használtam a szükséges ismeretek megszerzéséhez.
-                        <br><br>
-                        A webfejlesztés terén a  HTML, CSS és JavaScript  alapjait sajátítottam el, különös hangsúlyt fektetve a reszponzív designra, hogy az oldal minden eszközön jól használható legyen.
-                        <br><br>
-                        Az  ipari automatizálás és elektronika  területén a  PLC programozás  és az alapvető  elektronikai áramkörök  működését és tervezését tanulmányoztam. A projektek gyakorlati tapasztalatot nyújtottak a tanult elvek alkalmazásában.
-                        <br><br>
-                        A  Git és GitHub  használata elengedhetetlen volt a projektek verziókövetéséhez és a fejlődés dokumentálásához. Ez a módszer segített a munka szervezésében és a későbbi visszatekintésben.
-                        <br><br>
-                        Hiszem, hogy az önálló tanulás és a folyamatos fejlődés kulcsfontosságú a mai gyorsan változó technológiai környezetben. Nyitott vagyok új technológiák és módszerek megismerésére.
-                    </p>
                 </div>
 
-                <!-- Új blokk a tárhely és domain információval -->
-                <div class="tarhely-info" data-aos="fade-up">
-                    <h2>A Weboldal Elhelyezése (Tárhely és Domain)</h2>
-                    <p>
-                        Ezt a portfólió weboldalt a  Nethely.hu  szolgáltatójánál helyeztem el. Egy  1 GB tárhelyes csomagot  választottam, ami a jelenlegi tartalomhoz bőven elegendő, és a vásárlás során  kedvező áron  sikerült hozzájutnom. A tárhely kiválasztása és beállítása is része volt a weboldal elkészítésének, ami újabb gyakorlati tapasztalatot jelentett a weboldal publikálásával kapcsolatban.
-                    </p>
-                    <p class="security-note">
-                        Jelenleg a weboldal egy ingyenes aldomain néven érhető el a Nethely.hu jóvoltából. Ennek a megoldásnak a hátránya, hogy a weboldal  HTTP protokollon  keresztül működik, nem pedig a biztonságosabb  HTTPS-en . Ez azt jelenti, hogy az adatok átvitele nem titkosított. Tisztában vagyok ezzel a korláttal, és a jövőben fontolóra veszem egy saját domain név regisztrálását és egy SSL tanúsítvány beszerzését a HTTPS kapcsolat biztosítása érdekében.
-                    </p>
+                <!-- Őszinte Vallomás -->
+                <div class="reflection-card">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">💭</span>
+                        <h2>Miért használtam AI-t?</h2>
+                    </div>
+                    <div class="reflection-content">
+                        <p>
+                            Igen, bevallom. A weboldalam jelentős részét AI segítségével írtam meg. 
+                            De hadd magyarázzam el, miért nem szégyellem ezt:
+                        </p>
+                        
+                        <div class="reason-list">
+                            <div class="reason-item">
+                                <span class="reason-number">01</span>
+                                <div class="reason-text">
+                                    <h3>Időhatékonyság</h3>
+                                    <p>Tanulóként és dolgozó emberként az időm értékes. Az AI lehetővé tette, hogy gyorsabban elkészüljön az oldal, és több időm maradjon az elektronikai projektekre.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="reason-item">
+                                <span class="reason-number">02</span>
+                                <div class="reason-text">
+                                    <h3>Tanulási eszköz</h3>
+                                    <p>Az AI nem helyettesíti a tudást, hanem segít megszerezni. Minden kódsort átnéztem, megértettem, és ahol kellett, módosítottam. Ez egy modern tanulási módszer.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="reason-item">
+                                <span class="reason-number">03</span>
+                                <div class="reason-text">
+                                    <h3>Minőségi eredmény</h3>
+                                    <p>A végeredmény egy olyan weboldal lett, amire büszke vagyok. Reszponzív, modern, és pontosan azt mutatja, amit szerettem volna.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="reason-item">
+                                <span class="reason-number">04</span>
+                                <div class="reason-text">
+                                    <h3>Őszinteség</h3>
+                                    <p>Nem próbálom eltitkolni. Sőt, büszkén vállalom, hogy kihasználtam a modern technológia adta lehetőségeket. Ez is egy készség.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Amit Én Tettem Hozzá -->
+                <div class="reflection-card">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">🛠️</span>
+                        <h2>Amit én tettem hozzá</h2>
+                    </div>
+                    <div class="reflection-content">
+                        <p>Az AI segítség ellenére ez <strong>az én weboldalam</strong>. Íme, amit személyesen végeztem el:</p>
+                        
+                        <div class="contribution-grid">
+                            <div class="contribution-item">
+                                <span class="contribution-icon">🎨</span>
+                                <h4>Dizájn koncepció</h4>
+                                <p>A színek, az elrendezés, a hangulat - mind az én döntésem volt.</p>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon">📝</span>
+                                <h4>Tartalom</h4>
+                                <p>Minden szöveg, bemutatkozás, projektleírás tőlem származik.</p>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon">🔧</span>
+                                <h4>Finomhangolás</h4>
+                                <p>A CSS módosítások, a reszponzivitás tesztelése és javítása.</p>
+                            </div>
+                            <div class="contribution-item">
+                                <span class="contribution-icon">📸</span>
+                                <h4>Média tartalom</h4>
+                                <p>A képek, videók és egyéb média elemek elkészítése/összegyűjtése.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            </div> <!-- End of .container -->
+                <!-- Záró Gondolat -->
+                <div class="reflection-card closing-thought">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">✨</span>
+                        <h2>Végső gondolat</h2>
+                    </div>
+                    <div class="reflection-content">
+                        <div class="closing-quote">
+                            <p class="quote-text">
+                                "A technológia arra való, hogy használjuk. Az AI egy eszköz, mint a kalapács vagy a számítógép. 
+                                Nem az számít, hogy milyen eszközzel dolgozol, hanem hogy mit hozol létre vele."
+                            </p>
+                            <p class="quote-author">— Én, miután megtanultam együtt dolgozni az AI-val</p>
+                        </div>
+                        
+                        <div class="closing-message">
+                            <p>
+                                Ha idáig elolvastad, köszönöm! Remélem, hogy a weboldalam elnyerte a tetszésedet, 
+                                függetlenül attól, hogy hogyan készült. Ha van kedved, nézz körül a 
+                                <a href="projektek.html">projektek</a> között is!
+                            </p>
+                        </div>
+                        
+                        <div class="closing-emoji">
+                            <span>👨‍💻</span>
+                            <span>⚡</span>
+                            <span>🤝</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <p>© 2025 Csuka Róbert</p>
-        </div> <!-- CONTAINER BEZÁRVA -->
+     <!-- ===== LÁBLÉC - CSAK COPYRIGHT ===== -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <p class="footer-text-centered">© 2026 Csuka Róbert</p>
+        </div>
     </footer>
 
-    <!-- Hamburger menü JavaScript -->
+    <script src="script.js"></script>
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        hamburger.classList.remove('active');
-                    }
+        // Mobil menü kezelése
+        (function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
                 });
-            });
-        }
+                
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        })();
     </script>
-
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 </body>
 </html>

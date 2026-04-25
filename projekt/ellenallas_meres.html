@@ -1,256 +1,158 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ellenállás Mérés Feszültség Összehasonlítással - A Te Neved</title>
-<link rel="stylesheet" href="../style.css">
-        <!-- Google Fonts link -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #fafafa;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2c3e50;
-  }
-  /* Fő kép */
-  .main-image {
-    display: block;
-    margin: 20px auto;
-    max-width: 800px;
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  /* Szövegek */
-  p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-  }
-  /* Technológiák szekció */
-  .projekt-technologies {
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    margin-top: 20px;
-  }
-
-  .projekt-technologies h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #34495e;
-  }
-
-  .projekt-technologies ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .projekt-technologies li {
-    background-color: #e9e9eb;
-    margin: 5px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 0.95em;
-    transition: background-color 0.3s;
-  }
-
-  .projekt-technologies li:hover {
-    background-color: #d0d0d0;
-  }
-  /* További képek */
-  .tovabbi-kepek {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-    display: none; /* kezdetben elrejtve */
-    align-items: stretch;
-  }
-  .kepek-kartya {
-    display: inline-block;
-    max-width: 200px;
-    margin: 10px;
-    padding: 10px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.3s;
-    text-align: center;
-
-  }
-  .kepek-kartya.megnagyitott {
-    transform: scale(3);
-    z-index: 10;
-    position: relative;
-  }
-  .kepek-kartya img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    
-  }
-  /* Gombok */
-  .gombok {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  #toggle-kepek {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  #toggle-kepek:hover {
-    background-color: #0056b3;
-  }
-  .back-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: #6c757d;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .back-button:hover {
-    background-color: #5a6268;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellenállás Mérés - Csuka Róbert</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <nav class="navbar">
-                <a href="index.html" class="logo">Csuka Róbert</a>
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="../index.html">Bemutatkozás</a></li>
-                    <li><a href="../projektek.html">Projektek</a></li>
-                    <li><a href="../onreflexio.htm">Önreflexió</a></li>
-
+    <!-- ===== FEJLÉC ===== -->
+    <header class="projects-header">
+        <div class="container">
+            <nav class="nav-centered">
+                <ul class="nav-menu-centered">
+                    <li><a href="index.html">Kezdőlap</a></li>
+                    <li><a href="projektek.html" class="active">Projektek</a></li>
+                    <li><a href="onreflexio.htm">Önreflexió</a></li>
                 </ul>
             </nav>
-        </div> <!-- CONTAINER BEZÁRVA -->
+        </div>
     </header>
 
-<main>
-  <div class="content">
-    <h1>Ellenállás Mérés Feszültség Összehasonlítással</h1>
-    <!-- Fő kép -->
- 
+    <!-- ===== FŐ TARTALOM ===== -->
+    <main>
+        <!-- Vissza gomb -->
+        <section class="back-section">
+            <div class="container">
+                <a href="../projektek.html" class="back-link">← Vissza a projektekhez</a>
+            </div>
+        </section>
 
-  
-    <p>
-      Ez a projekt egy alternatív módszert mutat be az ellenállás értékének meghatározására a feszültség mérése és összehasonlítása alapján, digitális multiméter vagy közvetlen ellenállásmérő nélkül. A projekt célja volt megérteni az Ohm törvényét, a feszültségosztó működését, és hogyan lehet ismeretlen ellenállás értékét kiszámítni egy ismert ellenállással sorba kapcsolva.
-    </p>
-    <p>
-      A rendszer egy feszültségosztó áramkörből áll, ahol egy ismert értékű ellenállás van sorba kapcsolva a mérendő, ismeretlen ellenállással. Egy stabil feszültségforrást kapcsolunk az áramkörre. A projekt során megmérjük a feszültségesést az ismert ellenálláson, vagy az ismeretlen ellenálláson, és a feszültségosztó képlete alapján kiszámítjuk az értéket.
-    </p>
-    <p>
-      Ez a módszer különösen hasznos lehet olyan helyzetekben, amikor nincs kéznél multiméter, vagy beágyazott rendszerben szeretnénk mérni ellenállásokat analóg bemenettel. A projekt során mélyebben megértettem az elektronikus áramkörök alapjait, a mérés elvét és a számítási módszert.
-    </p>
+        <!-- Projekt címsor -->
+        <section class="page-header-enhanced">
+            <div class="container">
+                <div class="title-wrapper">
+                    <div class="title-backdrop"></div>
+                    <h1 class="page-title-enhanced">
+                        <span class="rocket-emoji">🔬</span> 
+                        <span class="title-text">Ellenállás Mérés</span>
+                    </h1>
+                    <p class="page-subtitle-enhanced">Arduino alapú precíziós mérőműszer</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Használt technológiák -->
-    <div class="projekt-technologies">
-      <h3>Használt technológiák / eszközök:</h3>
-      <ul>
-        <li>Stabil feszültségforrás (tápegység)</li>
-        <li>Ismert értékű ellenállás (referencia)</li>
-        <li>Mérendő, ismeretlen ellenállás(Potenciométer)</li>
-        <li>NI Multisim szoftver</li>
-        <li>Multiméter (feszültség mérésére)</li>
-        <li>Multiméter</li>
-        <li>Próbapanel</li>
-        <li>Vezetékszálak</li>
-      </ul>
-    </div>
+        <!-- Projekt Részletek -->
+        <section class="project-detail-section">
+            <div class="container">
+                <div class="project-detail-grid">
+                    
+                    <!-- Bal oldal: Leírás -->
+                    <div class="project-detail-content">
+                        <h2>A Projektről</h2>
+                        <p>
+                            Ez a projekt egy Arduino Uno mikrokontrollerre épülő precíziós ellenállásmérő műszer.
+                            A mérés feszültségosztó elvén működik: egy ismert referencia ellenállás és az ismeretlen
+                            ellenállás sorba kapcsolásával, a csomóponti feszültség mérésével határozza meg az
+                            ismeretlen ellenállás értékét.
+                        </p>
+                        
+                        <h3>Főbb jellemzők</h3>
+                        <ul class="feature-list">
+                            <li>Széles mérési tartomány (0 Ω – 1 MΩ)</li>
+                            <li>LCD kijelzőn azonnali értékkijelzés</li>
+                            <li>Kalibrációs funkció a pontosság növelésére</li>
+                            <li>Auto-range: automatikus méréshatár váltás</li>
+                            <li>USB tápellátás, hordozható kivitel</li>
+                        </ul>
 
-    <!-- További képek -->
-    <div class="tovabbi-kepek" id="tovabbi-kepek">
-      <div class="kepek-kartya">
-        <img src="../images/ni-multisim-png (2).PNG" alt="Kapcsolási rajz" />
-        <p>Kapcsolási rajz</p>
-      </div>
-      <div class="kepek-kartya">
-        <img src="../images/projekt_1.png" alt="Prototípus" />
-        <p>Prototípus felvétel</p>
-      </div>
-      <div class="kepek-kartya">
-        <img src="../images/ni multisim.png" alt="Másik példa" />
-        <p>Másik mérés példája</p>
-      </div>
-    </div>
+                        <h3>Felhasznált alkatrészek</h3>
+                        <div class="parts-list">
+                            <span class="part-badge">Arduino Uno</span>
+                            <span class="part-badge">16x2 LCD</span>
+                            <span class="part-badge">10 kΩ referencia</span>
+                            <span class="part-badge">Ellenállás sor</span>
+                            <span class="part-badge">Potenciométer</span>
+                            <span class="part-badge">Nyáklemez</span>
+                        </div>
 
-    <!-- Gombok -->
-    <div class="gombok">
-      <button id="toggle-kepek">További képek megjelenítése</button>
-      <a href="../projektek.html" class="back-button">← Vissza a projektekhez</a>
-    </div>
-  </div>
-</main>
+                        <h3>Kihívások és tanulságok</h3>
+                        <p>
+                            A legnagyobb kihívást a mérési pontosság elérése jelentette. A feszültségosztó
+                            érzékeny a tápfeszültség ingadozására, ezért kalibrációs algoritmust kellett
+                            implementálnom. Emellett sokat tanultam az analóg jelek digitalizálásáról és
+                            az ADC működéséről.
+                        </p>
+                    </div>
 
-    <footer>
-        <div class="container"> <!-- CONTAINER HOZZÁADVA -->
-            <p>© 2025 Csuka Róbert</p>
-        </div> <!-- CONTAINER BEZÁRVA -->
+                    <!-- Jobb oldal: Kép és adatlap -->
+                    <div class="project-detail-sidebar">
+                        <div class="project-image-card">
+                            <img src="../images/ellenallas-meres.jpg" alt="Ellenállás mérő" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-image-placeholder" style="display: none;">🔬</div>
+                        </div>
+                        
+                        <!-- Adatlap -->
+                        <div class="specs-card">
+                            <h3>📊 Műszaki Adatok</h3>
+                            <div class="specs-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Mérési tartomány</span>
+                                    <span class="spec-value">0 Ω – 1 MΩ</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Pontosság</span>
+                                    <span class="spec-value">±1%</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Referencia ellenállás</span>
+                                    <span class="spec-value">10 kΩ</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Mikrokontroller</span>
+                                    <span class="spec-value">ATmega328P</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Kijelző</span>
+                                    <span class="spec-value">16×2 LCD</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Tápfeszültség</span>
+                                    <span class="spec-value">5V USB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== LÁBLÉC - CSAK COPYRIGHT ===== -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <p class="footer-text-centered">© 2026 Csuka Róbert</p>
+        </div>
     </footer>
 
-<script>
-  // Képek megjelenítésének váltása
-  const toggleBtn = document.getElementById('toggle-kepek');
-  const kepekDiv = document.getElementById('tovabbi-kepek');
-
-  toggleBtn.addEventListener('click', () => {
-    if (kepekDiv.style.display === 'none' || kepekDiv.style.display === '') {
-      kepekDiv.style.display = 'flex';
-      toggleBtn.textContent = 'További képek elrejtése';
-    } else {
-      kepekDiv.style.display = 'none';
-      toggleBtn.textContent = 'További képek megjelenítése';
-    }
-  });
-
-  // Kattintásra nagyítás
-  document.querySelectorAll('.kepek-kartya').forEach(kartya => {
-    kartya.addEventListener('click', () => {
-      kartya.classList.toggle('megnagyitott');
-    });
-  });
-</script>
-
+    <script src="../script.js"></script>
+    <script>
+        (function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

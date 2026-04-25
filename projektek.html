@@ -55,7 +55,7 @@
                     <!-- 1. Ellenállás Mérés -->
                     <div class="project-card" data-category="elektro">
                         <div class="card-image">
-                            <img src="images/ellenallas-meres.jpg" alt="Ellenállás mérés" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <img src="images/ellenallas-meres.png" alt="Ellenállás mérés" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="card-placeholder" style="display: none;">🔬</div>
                             <div class="card-overlay">
                                 <a href="projekt/ellenallas_meres.html" class="overlay-link">Részletek →</a>
@@ -75,53 +75,61 @@
                         </div>
                     </div>
 
-                    <!-- 2. Futófény -->
-                    <div class="project-card" data-category="elektro">
-                        <div class="card-image">
-                            <img src="images/futofeny.jpg" alt="Futófény" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="card-placeholder" style="display: none;">💡</div>
-                            <div class="card-overlay">
-                                <a href="projekt/futofeny.html" class="overlay-link">Részletek →</a>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Futófény Áramkör</h3>
-                            <p class="card-description">
-                                Klasszikus futófény 555-ös timer IC és 4017-es dekád számláló 
-                                felhasználásával. Állítható sebességű LED sor.
-                            </p>
-                            <div class="card-tech">
-                                <span class="tech-badge">555 Timer</span>
-                                <span class="tech-badge">4017 IC</span>
-                                <span class="tech-badge">Analóg</span>
-                            </div>
-                        </div>
-                    </div>
+<!-- 2. Kártya: Futófény PLC -->
+<div class="project-card" data-category="elektro">
+    <div class="card-image">
+        <img src="images/futofeny-plc.jpg" alt="Futófény S7-1200 PLC" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="card-placeholder" style="display: none;">💡</div>
+        <div class="card-overlay">
+            <a href="projekt/futofeny.html" class="overlay-link">Részletek →</a>
+        </div>
+    </div>
+    <div class="card-content">
+        <h3 class="card-title">Futófény PLC</h3>
+        <p class="card-description">
+            Siemens S7-1200 PLC-n megvalósított ping-pong futófény.
+            Létradiagram (LAD) program, TIA Portal, 5 LED oda-vissza léptetéssel.
+        </p>
+        <div class="card-tech">
+            <span class="tech-badge">S7-1200</span>
+            <span class="tech-badge">TIA Portal</span>
+            <span class="tech-badge">LAD</span>
+            <span class="tech-badge">PLC</span>
+        </div>
+        <div class="card-footer">
+            <a href="projekt/futofeny.html" class="card-link">
+                Tovább <span class="arrow">→</span>
+            </a>
+            <span class="card-date">2025</span>
+        </div>
+    </div>
+</div>
 
-                    <!-- 3. Jelzőrendszer -->
-                    <div class="project-card" data-category="elektro">
-                        <div class="card-image">
-                            <img src="images/jelzorendszer.jpg" alt="Jelzőrendszer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="card-placeholder" style="display: none;">🚨</div>
-                            <div class="card-overlay">
-                                <a href="projekt/jelzorendszer.html" class="overlay-link">Részletek →</a>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Jelzőrendszer</h3>
-                            <p class="card-description">
-                                Nyomógombbal vezérelhető optikai és akusztikus jelzőrendszer. 
-                                Tranzisztoros kapcsolás, relé kimenet, nyugtázás funkcióval.
-                            </p>
-                            <div class="card-tech">
-                                <span class="tech-badge">Tranzisztor</span>
-                                <span class="tech-badge">Relé</span>
-                                <span class="tech-badge">Analóg</span>
-                            </div>
 
-                        </div>
-                    </div>
-
+<!-- 3. Kártya: Jelzőlámpa Rendszer -->
+<div class="project-card" data-category="elektro">
+    <div class="card-image">
+        <img src="images/jelzolampa.jpg" alt="Jelzőlámpa rendszer ESP32" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="card-placeholder" style="display: none;">🚦</div>
+        <div class="card-overlay">
+            <a href="projekt/jelzolampa.html" class="overlay-link">Részletek →</a>
+        </div>
+    </div>
+    <div class="card-content">
+        <h3 class="card-title">Jelzőlámpa Rendszer</h3>
+        <p class="card-description">
+            Modern ipari jelzőlámpa rendszer OpenPLC és ESP32 használatával.
+            Modbus TCP kommunikáció, webes felületen keresztüli valós idejű vezérlés
+            és monitorozás.
+        </p>
+        <div class="card-tech">
+            <span class="tech-badge">ESP32</span>
+            <span class="tech-badge">OpenPLC</span>
+            <span class="tech-badge">Modbus TCP</span>
+            <span class="tech-badge">IoT</span>
+        </div>
+    </div>
+</div>
                 </div>
 
                 <div class="no-results" style="display: none;">

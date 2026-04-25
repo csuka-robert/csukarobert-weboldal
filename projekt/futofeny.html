@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futófény - Csuka Róbert</title>
+    <title>Futófény PLC - Csuka Róbert</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,9 @@
         <div class="container">
             <nav class="nav-centered">
                 <ul class="nav-menu-centered">
-                    <li><a href="index.html" >Kezdőlap</a></li>
-                    <li><a href="projektek.html" class="active">Projektek</a></li>
-                    <li><a href="onreflexio.htm">Önreflexió</a></li>
+                    <li><a href="../index.html">Kezdőlap</a></li>
+                    <li><a href="../projektek.html" class="active">Projektek</a></li>
+                    <li><a href="../onreflexio.html">Önreflexió</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,9 +37,9 @@
                     <div class="title-backdrop"></div>
                     <h1 class="page-title-enhanced">
                         <span class="rocket-emoji">💡</span> 
-                        <span class="title-text">Futófény Áramkör</span>
+                        <span class="title-text">Futófény PLC</span>
                     </h1>
-                    <p class="page-subtitle-enhanced">Analóg áramkör 555 IC és 4017 IC felhasználásával</p>
+                    <p class="page-subtitle-enhanced">Siemens S7-1200 • Ping-pong futófény • Létradiagram</p>
                 </div>
             </div>
         </section>
@@ -48,83 +48,154 @@
             <div class="container">
                 <div class="project-detail-grid">
                     
+                    <!-- Bal oldal: Részletes leírás -->
                     <div class="project-detail-content">
                         <h2>A Projektről</h2>
                         <p>
-                            Ez a klasszikus futófény áramkör két legendás integrált áramkörre épül.
-                            Az 555-ös timer IC biztosítja a változtatható frekvenciájú órajelet,
-                            míg a 4017-es dekád számláló lépteti a kimeneteket, így a LED-ek
-                            egymás után világítanak, a "futófény" effektust létrehozva.
+                            Ez a projekt egy <strong>Siemens S7-1200</strong> PLC-n megvalósított
+                            <strong>ping-pong futófény</strong>, amely a LED-eket egymás után kapcsolja
+                            az egyik irányba, majd a sor végére érve automatikusan visszafelé indul.
+                            A program TIA Portal környezetben, létradiagram (LAD) nyelven készült.
                         </p>
                         
-                        <h3>Főbb jellemzők</h3>
+                        <h3>A Működés Elve</h3>
+                        <p>
+                            A futófény 5 LED-et vezérel. A léptetést egy időzítő (TON) vezérli,
+                            amely egy adott időközönként (pl. 200 ms) impulzust ad. A program
+                            egy shift regisztert használ, amely a biteket jobbra, majd balra
+                            lépteti. Amikor a legszélső LED világít, a léptetés iránya automatikusan
+                            megfordul.
+                        </p>
+                        
+                        <h3>Főbb Jellemzők</h3>
                         <ul class="feature-list">
-                            <li>10 db LED egymás utáni vezérlése</li>
-                            <li>Potenciométerrel állítható sebesség</li>
-                            <li>Impulzus szélesség moduláció (PWM) alapú vezérlés</li>
-                            <li>Alacsony fogyasztás (elemről is működik)</li>
-                            <li>Bővíthető több 4017 IC kaszkádosításával</li>
+                            <li>5 LED-es oda-vissza (ping-pong) futófény</li>
+                            <li>Siemens S7-1200 PLC vezérlés</li>
+                            <li>TIA Portal-ban fejlesztett létradiagram (LAD) program</li>
+                            <li>Állítható léptetési sebesség (időzítővel)</li>
+                            <li>Shift regiszter és irányváltó logika</li>
+                            <li>Üzembiztos ipari kivitel</li>
                         </ul>
 
-                        <h3>Felhasznált alkatrészek</h3>
-                        <div class="parts-list">
-                            <span class="part-badge">NE555 IC</span>
-                            <span class="part-badge">CD4017 IC</span>
-                            <span class="part-badge">10× LED</span>
-                            <span class="part-badge">Ellenállások</span>
-                            <span class="part-badge">Potenciométer</span>
-                            <span class="part-badge">Kondenzátor</span>
-                            <span class="part-badge">Próbapanel</span>
+                        <h3>A Program Felépítése</h3>
+                        <div class="knowledge-grid">
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">⏱️</span>
+                                <div>
+                                    <strong>Időzítő (TON)</strong>
+                                    <p>A léptetés ütemét egy TON időzítő adja. A preset érték állítható (pl. T#200ms).</p>
+                                </div>
+                            </div>
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">🔄</span>
+                                <div>
+                                    <strong>Shift Regiszter (SHR/SHL)</strong>
+                                    <p>A bitek jobbra és balra léptetése az irányváltó logika alapján történik.</p>
+                                </div>
+                            </div>
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">🔀</span>
+                                <div>
+                                    <strong>Irányváltó Logika</strong>
+                                    <p>Amikor a legszélső LED (Q0.0 vagy Q0.7) aktív, a program automatikusan irányt vált.</p>
+                                </div>
+                            </div>
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">💾</span>
+                                <div>
+                                    <strong>Memóriacímzés</strong>
+                                    <p>A kimenetek címzése %Q, a belső változók %M, az időzítők %DB címen történik.</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <h3>Működési elv</h3>
-                        <p>
-                            Az 555 IC astabil multivibrátor üzemmódban működik, a frekvenciát az
-                            RC tag határozza meg. A potenciométerrel az ellenállás értékét változtatva
-                            az órajel frekvenciája állítható. A 4017 IC minden órajelre lépteti a
-                            kimenetét, így a LED-ek sorban világítanak.
-                        </p>
+                        <h3>Felhasznált Technológiák és Eszközök</h3>
+                        <div class="parts-list">
+                            <span class="part-badge">Siemens S7-1200</span>
+                            <span class="part-badge">TIA Portal</span>
+                            <span class="part-badge">Létradiagram (LAD)</span>
+                            <span class="part-badge">5× LED</span>
+                            <span class="part-badge">Ellenállások</span>
+                            <span class="part-badge">Tápegység 24V</span>
+                            <span class="part-badge">Csatlakozók</span>
+                            <span class="part-badge">Vezetékek</span>
+                        </div>
                     </div>
 
+                    <!-- Jobb oldal: Kép, Adatlap -->
                     <div class="project-detail-sidebar">
+                        
+                        <!-- Kép -->
                         <div class="project-image-card">
-                            <img src="../images/futofeny.jpg" alt="Futófény áramkör" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <img src="../images/futofeny-plc.pjg" alt="Siemens S7-1200 Futófény" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-image-placeholder" style="display: none;">💡</div>
+                        </div>
+
+                        <!-- Videó (ha van) -->
+                        <div class="project-video-card">
+                            <h3>🎬 Működés Közben</h3>
+                            <div class="video-container">
+                                <video controls>
+                                    <source src="../video/futofeny-plc.mov" type="video/mp4">
+                                    A böngésződ nem támogatja a videó lejátszását.
+                                </video>
+                            </div>
+                            <p class="video-caption">Futófény oda-vissza mozgás közben</p>
+                        </div>
+                                                <div class="project-image-card">
+                            <img src="../images/futofeny-plc.png" alt="Siemens S7-1200 Futófény" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="project-image-placeholder" style="display: none;">💡</div>
                         </div>
                         
+                        <!-- Adatlap -->
                         <div class="specs-card">
                             <h3>📊 Műszaki Adatok</h3>
                             <div class="specs-list">
                                 <div class="spec-row">
-                                    <span class="spec-label">IC-k</span>
-                                    <span class="spec-value">NE555 + CD4017</span>
+                                    <span class="spec-label">PLC Típus</span>
+                                    <span class="spec-value">Siemens S7-1200</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Szoftver</span>
+                                    <span class="spec-value">TIA Portal</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Programnyelv</span>
+                                    <span class="spec-value">Létradiagram (LAD)</span>
                                 </div>
                                 <div class="spec-row">
                                     <span class="spec-label">LED-ek száma</span>
-                                    <span class="spec-value">10 db</span>
+                                    <span class="spec-value">5 db</span>
                                 </div>
                                 <div class="spec-row">
-                                    <span class="spec-label">Frekvencia</span>
-                                    <span class="spec-value">0,5 – 10 Hz</span>
+                                    <span class="spec-label">Mozgás típus</span>
+                                    <span class="spec-value">Oda-vissza (ping-pong)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Léptetési idő</span>
+                                    <span class="spec-value">Állítható (200 ms)</span>
                                 </div>
                                 <div class="spec-row">
                                     <span class="spec-label">Tápfeszültség</span>
-                                    <span class="spec-value">5 – 9V DC</span>
+                                    <span class="spec-value">24V DC</span>
                                 </div>
                                 <div class="spec-row">
-                                    <span class="spec-label">Áramfelvétel</span>
-                                    <span class="spec-value">~50 mA</span>
+                                    <span class="spec-label">Kimenetek</span>
+                                    <span class="spec-value">%Q0.0 – %Q0.7</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+
+
+
             </div>
         </section>
     </main>
 
-    <!-- ===== LÁBLÉC - CSAK COPYRIGHT ===== -->
+     <!-- ===== LÁBLÉC - CSAK COPYRIGHT ===== -->
     <footer class="footer-minimal">
         <div class="container">
             <p class="footer-text-centered">© 2026 Csuka Róbert</p>

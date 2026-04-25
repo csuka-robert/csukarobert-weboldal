@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelzőlámpa Rendszer - Csuka Róbert</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== FEJLÉC ===== -->
+    <header class="projects-header">
+        <div class="container">
+            <nav class="nav-centered">
+                <ul class="nav-menu-centered">
+                    <li><a href="../index.html">Kezdőlap</a></li>
+                    <li><a href="../projektek.html" class="active">Projektek</a></li>
+                    <li><a href="../onreflexio.html">Önreflexió</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== FŐ TARTALOM ===== -->
+    <main>
+        <!-- Vissza gomb -->
+        <section class="back-section">
+            <div class="container">
+                <a href="../projektek.html" class="back-link">← Vissza a projektekhez</a>
+            </div>
+        </section>
+
+        <!-- Projekt címsor -->
+        <section class="page-header-enhanced">
+            <div class="container">
+                <div class="title-wrapper">
+                    <div class="title-backdrop"></div>
+                    <h1 class="page-title-enhanced">
+                        <span class="rocket-emoji">🚦</span> 
+                        <span class="title-text">Jelzőlámpa Rendszer</span>
+                    </h1>
+                    <p class="page-subtitle-enhanced">OpenPLC • ESP32 • Modbus TCP • Webes vezérlés</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projekt Részletek -->
+        <section class="project-detail-section">
+            <div class="container">
+                <div class="project-detail-grid">
+                    
+                    <!-- Bal oldal: Részletes leírás -->
+                    <div class="project-detail-content">
+                        <h2>A Projektről</h2>
+                        <p>
+                            Ez a projekt egy <strong>ipari jelzőlámpa rendszer</strong>, amely 
+                            ipari környezetben is alkalmazható, modern automatizálási megoldásként 
+                            valósult meg az <strong>OpenPLC</strong> szoftver és az <strong>ESP32</strong> 
+                            mikrokontroller segítségével. A célom az volt, hogy megismerjem 
+                            a mikrokontrolleres vezérlést, a kommunikációs protokollokat és a webes 
+                            felületen történő irányítást.
+                        </p>
+                        
+                        <h3>A Jelzőlámpa Működése</h3>
+                        <p>
+                            A rendszer három állapotú (piros-sárga-zöld) jelzőlámpa vezérlését 
+                            valósítja meg. A webes felületen keresztül a felhasználók valós idejű 
+                            adatokat láthatnak, például a jelzőlámpa aktuális állapotát, valamint 
+                            lehetőségük van beavatkozni: a lámpák egyenkénti kapcsolására, 
+                            automata ciklus indítására vagy a rendszer leállítására.
+                        </p>
+
+                        <h3>Tanulságok és Megszerzett Tudás</h3>
+                        <div class="knowledge-grid">
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">🔌</span>
+                                <div>
+                                    <strong>Modbus TCP Kommunikáció</strong>
+                                    <p>A jelzőlámpa és a vezérlő között Modbus TCP protokollon keresztül történik az adatátvitel.</p>
+                                </div>
+                            </div>
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">🌐</span>
+                                <div>
+                                    <strong>Webes Irányítópult</strong>
+                                    <p>A böngészőből elérhető felület valós idejű állapotjelzést és távvezérlést biztosít.</p>
+                                </div>
+                            </div>
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">⚙️</span>
+                                <div>
+                                    <strong>OpenPLC Programozás</strong>
+                                    <p>Létra logika (ladder diagram) segítségével programoztam a vezérlési szekvenciákat.</p>
+                                </div>
+                            </div>
+                            <div class="knowledge-item">
+                                <span class="knowledge-icon">📡</span>
+                                <div>
+                                    <strong>IoT Integráció</strong>
+                                    <p>A projekt bemutatja, hogyan lehet egy fizikai jelzőlámpát IoT eszközzé alakítani.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Felhasznált Technológiák és Eszközök</h3>
+                        <div class="parts-list">
+                            <span class="part-badge">ESP32</span>
+                            <span class="part-badge">OpenPLC</span>
+                            <span class="part-badge">Modbus TCP</span>
+                            <span class="part-badge">LED-ek</span>
+                            <span class="part-badge">Ellenállások</span>
+                            <span class="part-badge">Próbapanel</span>
+                            <span class="part-badge">Vezetékek</span>
+                            <span class="part-badge">Sorkapcsok</span>
+                            <span class="part-badge">Tápegység</span>
+                            <span class="part-badge">Router</span>
+                        </div>
+                    </div>
+
+                    <!-- Jobb oldal: Kép, Videó és Adatlap -->
+                    <div class="project-detail-sidebar">
+                        
+                        <!-- Kép -->
+                        <div class="project-image-card">
+                            <img src="../images/jelzolampa.jpg" alt="Jelzőlámpa rendszer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-image-placeholder" style="display: none;">🚦</div>
+                        </div>
+
+                        <!-- Videó -->
+<!-- Videó 1 -->
+<div class="project-video-card">
+    <h3>🎬 Bemutató Videó</h3>
+    <div class="video-container">
+        <video controls>
+            <source src="../video/jelzolampa-1.mp4" type="video/mp4">
+            A böngésződ nem támogatja a videó lejátszását.
+        </video>
+    </div>
+    <p class="video-caption">A jelzőlámpa rendszer áttekintése</p>
+</div>
+
+<!-- Videó 2 -->
+<div class="project-video-card">
+    <h3>🎬 Webes Vezérlés Bemutató</h3>
+    <div class="video-container">
+        <video controls>
+            <source src="../video/jelzolampa-2.mp4" type="video/mp4">
+            A böngésződ nem támogatja a videó lejátszását.
+        </video>
+    </div>
+    <p class="video-caption">Webes felületen keresztüli vezérlés működés közben</p>
+</div>
+
+                        
+                        <!-- Adatlap -->
+                        <div class="specs-card">
+                            <h3>📊 Műszaki Adatok</h3>
+                            <div class="specs-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Mikrokontroller</span>
+                                    <span class="spec-value">ESP32</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Szoftver</span>
+                                    <span class="spec-value">OpenPLC</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Protokoll</span>
+                                    <span class="spec-value">Modbus TCP</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Jelzőlámpa típus</span>
+                                    <span class="spec-value">3 szín (P-S-Z)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Vezérlés</span>
+                                    <span class="spec-value">Webes Felület</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Kapcsolat</span>
+                                    <span class="spec-value">WiFi / Ethernet</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Tápfeszültség</span>
+                                    <span class="spec-value">5V / 3.3V DC</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Alkalmazási Területek -->
+        <section class="applications-section">
+            <div class="container">
+                <h2 class="section-title">Alkalmazási Területek</h2>
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <span class="application-icon">🏗️</span>
+                        <h4>Ipari jelzőrendszerek</h4>
+                        <p>Gyártósorok állapotjelzése, veszélyjelzés</p>
+                    </div>
+                    <div class="application-card">
+                        <span class="application-icon">🚦</span>
+                        <h4>Forgalomirányítás</h4>
+                        <p>Közlekedési lámpák, sorompók vezérlése</p>
+                    </div>
+                    <div class="application-card">
+                        <span class="application-icon">🏭</span>
+                        <h4>Raktári logisztika</h4>
+                        <p>Betárolás, kiadás állapotának jelzése</p>
+                    </div>
+                    <div class="application-card">
+                        <span class="application-icon">🔔</span>
+                        <h4>Riasztórendszerek</h4>
+                        <p>Vizuális és webes riasztások integrációja</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== LÁBLÉC ===== -->
+    <footer>
+        <div class="container footer-container">
+            <p class="footer-text">© 2026 Csuka Róbert</p>
+            <div class="footer-links">
+                <a href="../index.html">Kezdőlap</a>
+                <span class="separator">|</span>
+                <a href="../projektek.html">Projektek</a>
+                <span class="separator">|</span>
+                <a href="../onreflexio.html">Önreflexió</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        (function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
